@@ -15,7 +15,7 @@ class BeerListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //UINavigationController 설정
-        title = "패캠브루어리"
+        title = "맥주 리스트"
         navigationController?.navigationBar.prefersLargeTitles = true
         
         //UITableView 설정

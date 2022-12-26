@@ -24,5 +24,14 @@ extension BeerListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return beerList.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BeerListCell", for: indexPath) as? BeerListCell else { return UITableViewCell() }
+                
+                let beer = beerList[indexPath.row]
+                cell.configure(with: beer)
+        
+        return UITableViewCell()
+    }
 }
 

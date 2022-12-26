@@ -10,4 +10,19 @@ import UIKit
 
 class BeerListViewController: UITableViewController {
     
+    var beerList = [Beer]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "맥주집"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+}
+
+
+extension BeerListViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return beerList.count
+    }
 }
